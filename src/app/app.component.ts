@@ -65,4 +65,9 @@ export class AppComponent implements OnInit{
         const value = this.form.value;
         console.log(value);
         }
+		
+		
+		
+		
+		
 }
