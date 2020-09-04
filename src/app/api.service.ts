@@ -13,11 +13,11 @@ export class ApiService {
 
 constructor( private http:HttpClient ) { }
 
-    llamarModeloLineal(parametro1:Number, parametro2:number): Observable<any> {
-	    return this.http.get('http://localhost:5000/api/llamada', {
+    llamarModeloLineal(start:Number, end:number): Observable<any> {
+	    return this.http.get('http://localhost:5000/api/', {
             params: new HttpParams()
-                .set('parametro1', String(parametro1))
-                .set('parametro2', String(parametro2))
+                .set('start', String(start))
+                .set('end', String(end))
         }).pipe(
             map(res =>  res["payload"])
         );
