@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
 
-  {path: 'AppComponent/:parametro1/:parametro2', component:AppComponent}
+  {path: 'AppComponent/:parametro1/:parametro2/:parametro3', component:AppComponent}
 ];
 
 @NgModule({

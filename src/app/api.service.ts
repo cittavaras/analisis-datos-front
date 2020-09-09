@@ -13,11 +13,13 @@ export class ApiService {
 
 constructor( private http:HttpClient ) { }
     // la ruta finalmente será más menos así http://127.0.0.1:5000/api/?start=2020-02-10&end=2020-07-15
-    llamarModeloLineal(start:Number, end:number): Observable<any> {
-	    return this.http.get('http://localhost:5000/api/', {
+    // la ruta se cambió y quedó así http://167.99.231.117:5000/api/?start=2020-02-10&end=2020-07-15
+    llamarModeloLineal(start:Number, end:number, region:string): Observable<any> {
+	    return this.http.get('http://167.99.231.117:5000/api/', {
             params: new HttpParams()
                 .set('start', String(start))
                 .set('end', String(end))
+                .set('region', String(region))
         }).pipe(
             map(res =>  res["payload"])
         );

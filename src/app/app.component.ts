@@ -21,7 +21,8 @@ export class AppComponent implements OnInit{
 
         this.form = fb.group({
                     parametro1: ['', [Validators.required]],
-                    parametro2: ['', [Validators.required]]
+                    parametro2: ['', [Validators.required]],
+                    parametro3: ['', [Validators.required]]
             });
     }
 
@@ -43,7 +44,8 @@ export class AppComponent implements OnInit{
     private buildForm2() {
     this.form = new FormGroup({
       parametro1    : new FormControl('', [Validators.required]),
-      parametro2 : new FormControl('', [Validators.required])
+      parametro2 : new FormControl('', [Validators.required]),
+      parametro3 : new FormControl('', [Validators.required])
     });
 
 
@@ -54,10 +56,12 @@ export class AppComponent implements OnInit{
 
 		console.log("Alguien hizo click", this.form.value);
 		const fecinicio=this.form.value.parametro1;
-		const fectermino=this.form.value.parametro2;
+    const fectermino=this.form.value.parametro2;
+    const region=this.form.value.parametro3;
 		console.log(fecinicio);
-		console.log(fectermino);
-            this.apiService.llamarModeloLineal(fecinicio,fectermino).pipe(
+    console.log(fectermino);
+    console.log(region);
+            this.apiService.llamarModeloLineal(fecinicio,fectermino,region).pipe(
                 catchError(() => of([]))
             )
             .subscribe(value => this.form.value);
