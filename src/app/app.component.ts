@@ -5,11 +5,15 @@ import {Observable, BehaviorSubject, of} from "rxjs";
 import {catchError, finalize} from "rxjs/operators";
 import { debounceTime } from 'rxjs/operators';
 import {ApiService} from "./api.service";
+import { environment } from 'src/environments/environment';
+import * as Mapboxgl from 'mapbox-gl';
+import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  // providers: [ApiService]
 })
 export class AppComponent implements OnInit{
     title: string;
@@ -26,8 +30,66 @@ export class AppComponent implements OnInit{
             });
     }
 
+    mapa: Mapboxgl.Map;
     ngOnInit() {
         this.title = "Data analisis"
+        Mapboxgl.accessToken = environment.mapboxKey;
+        this.mapa = new Mapboxgl.Map({
+        container: 'mapa-map',
+        style: 'mapbox://styles/mapbox/dark-v10',
+        zoom: 10,
+        center: [-70.9100243,-33.4718999]
+        });
+         
+        this.mapa.on('load', function () {
+        /* Sample feature from the `examples.8fgz4egr` tileset:
+        {
+        "type": "Feature",
+        "properties": {
+        "ethnicity": "White"
+        },
+        "geometry": {
+        "type": "Point",
+        "coordinates": [ -122.447303, 37.753574 ]
+        }
+        }
+        */
+        this.mapa.addSource('ethnicity', {
+        type: 'vector',
+        url: 'mapbox://examples.8fgz4egr'
+        });
+        this.mapa.addLayer({
+        'id': 'population',
+        'type': 'circle',
+        'source': 'ethnicity',
+        'source-layer': 'sf2010',
+        'paint': {
+        // make circles larger as the user zooms from z12 to z22
+        'circle-radius': {
+        'base': 1.75,
+        'stops': [
+        [12, 2],
+        [22, 180]
+        ]
+        },
+        // color circles by ethnicity, using a match expression
+        // https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
+        'circle-color': [
+        'match',
+        ['get', 'ethnicity'],
+        'White',
+        '#fbb03b',
+        'Black',
+        '#223b53',
+        'Hispanic',
+        '#e55e5e',
+        'Asian',
+        '#3bb2d0',
+        /* other */ '#ccc'
+        ]
+        }
+        });
+        });
         }
 
     // save() {
@@ -38,7 +100,6 @@ export class AppComponent implements OnInit{
     //         .subscribe(title => this.title);
 
     //     }
-
 
 
     private buildForm2() {
@@ -69,9 +130,4 @@ export class AppComponent implements OnInit{
         const value = this.form.value;
         console.log(value);
         }
-		
-		
-		
-		
-		
 }
