@@ -363,36 +363,26 @@
     </a>
   </div>
 
-  <!-- Resources -->
+  <!-- Resources -->  
   <h2 class="letrabl">Crea un filtro!</h2>
-      <form [formGroup]="form" (ngSubmit)="save2($event)">
+      <form [formGroup]="form" (ngSubmit)="save2($event)" >
 
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text border border-info" id="basic-addon1">Palabra</span>
           </div>
-          <input type="text" class="form-control border border-info" placeholder="Ingrese su busqueda" aria-label="parametro1" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text border border-info" id="basic-addon1">Fecha Inicio</span>
-          </div>
-          <input type="date" formControlName="parametro1" class="form-control border border-info" aria-label="fechainicio" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text border border-info" id="basic-addon1">Fecha Término</span>
-          </div>
-          <input type="date" formControlName="parametro2" class="form-control border border-info" aria-label="fechatermino" aria-describedby="basic-addon1">
+          <input type="text" class="form-control border border-info" placeholder="Ingrese su busqueda" aria-label="palabra" formControlName="parametro4" aria-describedby="basic-addon1"
+          required>
         </div>
 
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text border border-info" id="basic-addon1">Región</span>
+            <span class="input-group-text border border-info" id="basic-addon1" >Región</span>
           </div>
-          <select class="form-control" formControlName="parametro3" aria-label="region">
+          <select class="form-control" formControlName="parametro3" aria-label="region" required>
+            <option value="" disabled selected hidden>Seleccione una region</option>
             <option value="1">Tarapacá</option>
-            <option value="2">Antofagaste</option>
+            <option value="2">Antofagasta</option>
             <option value="3">Atacama</option>
             <option value="4">Coquimbo</option>
             <option value="5">Valparaiso</option>
@@ -410,8 +400,21 @@
           </select>
         </div>
 
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text border border-info" id="basic-addon1">Fecha Inicio</span>
+          </div>
+          <input type="date" formControlName="parametro1" class="form-control border border-info" aria-label="fechainicio" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text border border-info" id="basic-addon1">Fecha Término</span>
+          </div>
+          <input type="date" formControlName="parametro2" class="form-control border border-info" aria-label="fechatermino" aria-describedby="basic-addon1">
+        </div>
+
         <div>
-          <button class="btn btn-dark btn-outline-info btn-lg btn-block" align-center>Filtrar</button>
+          <button [disabled]="form.invalid" class="btn btn-dark btn-outline-info btn-lg btn-block" align-center>Filtrar</button>
         </div>
       </form>
 
