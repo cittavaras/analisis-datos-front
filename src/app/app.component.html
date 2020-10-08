@@ -2,7 +2,7 @@
 <style>
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
+    font-size: 14px; 
     color: #333;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -26,8 +26,13 @@
     flex: 1;
   }
 
-  .letrabl{color:white;}
-  .letrablack{color:black;}
+  .letrabl {
+    color: white;
+  }
+
+  .letrablack {
+    color: black;
+  }
 
 
   .toolbar {
@@ -43,18 +48,18 @@
     font-weight: 600;
   }
 
-  .toolbar img {
-    margin: 0 16px;
-  }
+    .toolbar img {
+      margin: 0 16px;
+    }
 
-  .toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 16px;
-  }
+    .toolbar #twitter-logo {
+      height: 40px;
+      margin: 0 16px;
+    }
 
-  .toolbar #twitter-logo:hover {
-    opacity: 0.8;
-  }
+      .toolbar #twitter-logo:hover {
+        opacity: 0.8;
+      }
 
   .content {
     display: flex;
@@ -68,12 +73,12 @@
   svg.material-icons {
     height: 24px;
     width: auto;
-    color:black;
+    color: black;
   }
 
-  svg.material-icons:not(:last-child) {
-    margin-right: 8px;
-  }
+    svg.material-icons:not(:last-child) {
+      margin-right: 8px;
+    }
 
   .card svg.material-icons path {
     fill: #888;
@@ -115,14 +120,14 @@
     cursor: pointer;
   }
 
-  .card-container .card:not(.highlight-card):hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
+    .card-container .card:not(.highlight-card):hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
 
-  .card-container .card:not(.highlight-card):hover .material-icons path {
-    fill: rgb(105, 103, 103);
-  }
+      .card-container .card:not(.highlight-card):hover .material-icons path {
+        fill: rgb(105, 103, 103);
+      }
 
   .card.highlight-card {
     background-color: #1976d2;
@@ -160,9 +165,9 @@
     text-decoration: none;
   }
 
-  a:hover {
-    color: #125699;
-  }
+    a:hover {
+      color: #125699;
+    }
 
   .terminal {
     position: relative;
@@ -175,27 +180,27 @@
     background-color: rgb(15, 15, 16);
   }
 
-  .terminal::before {
-    content: "\2022 \2022 \2022";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: rgb(58, 58, 58);
-    color: #c2c3c4;
-    width: 100%;
-    font-size: 2rem;
-    line-height: 0;
-    padding: 14px 0;
-    text-indent: 4px;
-  }
+    .terminal::before {
+      content: "\2022 \2022 \2022";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: rgb(58, 58, 58);
+      color: #c2c3c4;
+      width: 100%;
+      font-size: 2rem;
+      line-height: 0;
+      padding: 14px 0;
+      text-indent: 4px;
+    }
 
-  .terminal pre {
-    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-    color: white;
-    padding: 0 1rem 1rem;
-    margin: 0;
-  }
+    .terminal pre {
+      font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+      color: white;
+      padding: 0 1rem 1rem;
+      margin: 0;
+    }
 
   .circle-link {
     height: 40px;
@@ -212,10 +217,10 @@
     transition: 1s ease-out;
   }
 
-  .circle-link:hover {
-    transform: translateY(-0.25rem);
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  }
+    .circle-link:hover {
+      transform: translateY(-0.25rem);
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    }
 
   footer {
     margin-top: 8px;
@@ -224,10 +229,10 @@
     line-height: 20px;
   }
 
-  footer a {
-    display: flex;
-    align-items: center;
-  }
+    footer a {
+      display: flex;
+      align-items: center;
+    }
 
   .github-star-badge {
     color: #24292e;
@@ -243,17 +248,17 @@
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   }
 
-  .github-star-badge:hover {
-    background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
-    border-color: rgba(27,31,35,.35);
-    background-position: -.5em;
-  }
+    .github-star-badge:hover {
+      background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
+      border-color: rgba(27,31,35,.35);
+      background-position: -.5em;
+    }
 
-  .github-star-badge .material-icons {
-    height: 16px;
-    width: 16px;
-    margin-right: 4px;
-  }
+    .github-star-badge .material-icons {
+      height: 16px;
+      width: 16px;
+      margin-right: 4px;
+    }
 
   svg#clouds {
     position: fixed;
@@ -267,7 +272,7 @@
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
 
-    .card-container > *:not(.circle-link) ,
+    .card-container > *:not(.circle-link),
     .terminal {
       width: 100%;
     }
@@ -296,7 +301,7 @@
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-  <img src="..\assets/duoc.png" width="90" height="40" alt="" loading="lazy">
+  <img src="..\assets/duoc.png" width="120" height="25" alt="" loading="lazy">
   <!-- <a class="navbar-brand">Front Master</a> -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -314,12 +319,15 @@
         <a class="nav-link" href="#">Contáctanos <span class="sr-only">(current)</span></a>
       </li>
     </ul>
+
+
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+      <input class="form-control mr-sm-2"  style="border: 1px solid #17a2b8" type="search" placeholder="" aria-label="Search">
       <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
     </form>
   </div>
 </nav>
+
 
 <div class="content" role="main">
   <img src="..\assets/ivaras2.png" class="img-fluid" alt="Responsive image">
@@ -363,68 +371,68 @@
     </a>
   </div>
 
-  <!-- Resources -->  
-  <h2 class="letrabl">Crea un filtro!</h2>
-      <form [formGroup]="form" (ngSubmit)="save2($event)" >
+  <!-- Resources -->
+  <h2 class="letrabl" id="filtro">Crea un filtro</h2>
+  <form [formGroup]="form" (ngSubmit)="save2($event)">
 
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text border border-info" id="basic-addon1">Palabra</span>
-          </div>
-          <input type="text" class="form-control border border-info" placeholder="Ingrese su busqueda" aria-label="palabra" formControlName="parametro4" aria-describedby="basic-addon1"
-          required>
-        </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text border border-info" id="basic-addon1">Palabra</span>
+      </div>
+      <input type="text" class="form-control border border-info" placeholder="Ingrese su busqueda" aria-label="palabra" formControlName="parametro4" aria-describedby="basic-addon1"
+             required>
+    </div>
 
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text border border-info" id="basic-addon1" >Región</span>
-          </div>
-          <select class="form-control" formControlName="parametro3" aria-label="region" required>
-            <option value="" disabled selected hidden>Seleccione una region</option>
-            <option value="1">Tarapacá</option>
-            <option value="2">Antofagasta</option>
-            <option value="3">Atacama</option>
-            <option value="4">Coquimbo</option>
-            <option value="5">Valparaiso</option>
-            <option value="6">Libertador General Bernardo O'Higgins</option>
-            <option value="7">Maule</option>
-            <option value="8">Concepción</option>
-            <option value="9">Araucanía</option>
-            <option value="10">Los lagos</option>
-            <option value="11">Aysén del General Carlos Ibañez del Campo</option>
-            <option value="12">Magallanes y de la Antártica Chilena</option>
-            <option selected value="13" >Metropolitana de Santiago</option>
-            <option value="14">Los Ríos</option>
-            <option value="15">Arica y Parinacota</option>
-            <option value="16">Ñuble</option>
-          </select>
-        </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text border border-info" id="basic-addon1">Región</span>
+      </div>
+      <select class="form-control" formControlName="parametro3" aria-label="region" required id="linea">
+        <option value="" disabled selected hidden>Seleccione una region</option>
+        <option value="1">Tarapacá</option>
+        <option value="2">Antofagasta</option>
+        <option value="3">Atacama</option>
+        <option value="4">Coquimbo</option>
+        <option value="5">Valparaiso</option>
+        <option value="6">Libertador General Bernardo O'Higgins</option>
+        <option value="7">Maule</option>
+        <option value="8">Concepción</option>
+        <option value="9">Araucanía</option>
+        <option value="10">Los lagos</option>
+        <option value="11">Aysén del General Carlos Ibañez del Campo</option>
+        <option value="12">Magallanes y de la Antártica Chilena</option>
+        <option selected value="13">Metropolitana de Santiago</option>
+        <option value="14">Los Ríos</option>
+        <option value="15">Arica y Parinacota</option>
+        <option value="16">Ñuble</option>
+      </select>
+    </div>
 
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text border border-info" id="basic-addon1">Fecha Inicio</span>
-          </div>
-          <input type="date" formControlName="parametro1" class="form-control border border-info" aria-label="fechainicio" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text border border-info" id="basic-addon1">Fecha Término</span>
-          </div>
-          <input type="date" formControlName="parametro2" class="form-control border border-info" aria-label="fechatermino" aria-describedby="basic-addon1">
-        </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text border border-info" id="basic-addon1">Fecha Inicio</span>
+      </div>
+      <input type="date" formControlName="parametro1" class="form-control border border-info" aria-label="fechainicio" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text border border-info" id="basic-addon1">Fecha Término</span>
+      </div>
+      <input type="date" formControlName="parametro2" class="form-control border border-info" aria-label="fechatermino" aria-describedby="basic-addon1">
+    </div>
 
-        <div>
-          <button [disabled]="form.invalid" class="btn btn-dark btn-outline-info btn-lg btn-block" align-center>Filtrar</button>
-        </div>
-      </form>
+    <div>
+      <button [disabled]="form.invalid" class="btn btn-dark btn-outline-info btn-lg btn-block" align-center id="filtrar">Filtrar</button>
+    </div>
+  </form>
 
   <div class="card-container">
     <a class="card border border-info" target="_blank" rel="noopener" href="https://ssoprd.duoc.cl/auth/realms/WEB_APPS_PRD/protocol/openid-connect/auth?client_id=411f013c&nonce=05778c09e0d557f007a219e227022191&redirect_uri=https%3A%2F%2Fexperienciavivo.duoc.cl%2Fauth%2Fopenidc%2Fcallback&response_type=code&scope=openid&state=cac6eab218d13a3d7156298749a0418d">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" /></svg>
 
       <span>Campus virtual</span>
 
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
     </a>
   </div>
 
@@ -433,8 +441,8 @@
 
   <!-- Terminal -->
   <div class="terminal" [ngSwitch]="selection.value">
-      <pre *ngSwitchDefault></pre>
-      <pre *ngSwitchCase="'filtrar'">El resultado de la busqueda debería aprecer AQUÍ</pre>
+    <pre *ngSwitchDefault></pre>
+    <pre *ngSwitchCase="'filtrar'">El resultado de la busqueda debería aprecer AQUÍ</pre>
   </div>
 
   <div id="mapa-map"></div>
@@ -445,7 +453,7 @@
   </footer>
 
   <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
-    <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee"/>
+    <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee" />
   </svg>
 
 </div>
