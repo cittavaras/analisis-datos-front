@@ -60,6 +60,39 @@ export class AppComponent implements OnInit{
       {text: 'Fauna', weight: 10, link: 'https://google.com', tooltip: 'display a tooltip'},
       // ...
     ];
+    data2: CloudData[] = [
+      {text: 'REDUCIR', weight: 120, color: '#8AFF33', rotate: 90},
+      {text: 'NO + BOMBILLAS PLÁSTICAS', weight: 60, color: '#3D8034', rotate: 10},
+      {text: 'BOLSAS DE TELA', weight: 45, color: '#3C7534', rotate: 35},
+      {text: 'MEDIO AMBIENTE', weight: 100, color: '#187809', rotate: 20},
+      {text: '3R', weight: 40, color: '#06C234', rotate: 10},
+      {text: 'Biodegradable', weight: 40, color: '#008000', rotate: 12},
+      {text: 'Naturaleza', weight: 40, color: '#008000', rotate: 100},
+      {text: 'Salud', weight: 40, color: '#008000', rotate: 120},
+      {text: 'NO + BOTELLAS PLÁSTICAS', weight: 50, color: '#3C7534', rotate: 35},
+      {text: '+Vida', weight: 40, color: '#008000', rotate: 12},
+      {text: '-BASURA ACUMULADA', weight: 30, color: '#3C7534', rotate: 35},
+      {text: '+Flora', weight: 40, color: '#008000', rotate: 120},
+      {text: '+Fauna', weight: 10, link: 'https://google.com', tooltip: 'display a tooltip'},
+      // ...
+    ];
+
+data3: CloudData[] = [
+      {text: 'REUTILIZAR', weight: 120, color: '#8AFF33', rotate: 90},
+      {text: '-CONTAMINACIÓN', weight: 70, color: '#3D8034', rotate: 10},
+      {text: '-BASURA', weight: 45, color: '#3C7534', rotate: 35},
+      {text: 'MEDIO AMBIENTE', weight: 100, color: '#187809', rotate: 20},
+      {text: '3R', weight: 40, color: '#06C234', rotate: 10},
+      {text: 'CREA COSAS', weight: 40, color: '#008000', rotate: 12},
+      {text: 'AYUDA A LA NATURALEZA', weight: 40, color: '#008000', rotate: 100},
+      {text: 'Salud', weight: 40, color: '#008000', rotate: 120},
+      {text: 'Desechos', weight: 50, color: '#3C7534', rotate: 35},
+      {text: '+IDEAS', weight: 40, color: '#008000', rotate: 12},
+      {text: '+VIDA', weight: 30, color: '#3C7534', rotate: 35},
+      {text: '+Flora', weight: 40, color: '#008000', rotate: 120},
+      {text: '+Fauna', weight: 10, link: 'https://google.com', tooltip: 'display a tooltip'},
+      // ...
+    ];
 
     constructor(
     private fb: FormBuilder,
