@@ -12,6 +12,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 import {HttpClientModule} from "@angular/common/http";
 
+import { TagCloudModule } from 'angular-tag-cloud-module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -25,6 +27,7 @@ import {HttpClientModule} from "@angular/common/http";
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    TagCloudModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

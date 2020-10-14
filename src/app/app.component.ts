@@ -8,16 +8,58 @@ import {ApiService} from "./api.service";
 import { environment } from 'src/environments/environment';
 import * as Mapboxgl from 'mapbox-gl';
 import { mapToMapExpression } from '@angular/compiler/src/render3/util';
+import { CloudData, CloudOptions } from 'angular-tag-cloud-module';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   // providers: [ApiService]
+  template: 
+  `
+    <div>
+      <angular-tag-cloud
+        [data]="data"
+        [width]="options.width"
+        [height]="options.height"
+        [color]="options.color"
+        [overflow]="options.overflow">
+      </angular-tag-cloud>
+    </div>
+  `
 })
 export class AppComponent implements OnInit{
     title: string;
     form: FormGroup;
+    options: CloudOptions = {
+      // if width is between 0 and 1 it will be set to the width of the upper element multiplied by the value
+      width: 1000,
+      // if height is between 0 and 1 it will be set to the height of the upper element multiplied by the value
+      height: 400,
+      overflow: false,
+      zoomOnHover: {
+        scale: 1.2,
+        transitionTime: 0.3,
+        delay: .3
+      },
+      realignOnResize: true,
+    };
+    data: CloudData[] = [
+      {text: 'RECICLAR', weight: 60, color: '#8AFF33', rotate: 90},
+      {text: 'CONTAMINACIÓN', weight: 70, color: '#3D8034', rotate: 10},
+      {text: 'BASURA', weight: 45, color: '#3C7534', rotate: 35},
+      {text: 'MEDIO AMBIENTE', weight: 100, color: '#187809', rotate: 20},
+      {text: '3R', weight: 40, color: '#06C234', rotate: 10},
+      {text: 'Biodegradable', weight: 40, color: '#008000', rotate: 12},
+      {text: 'Naturaleza', weight: 40, color: '#008000', rotate: 100},
+      {text: 'Salud', weight: 40, color: '#008000', rotate: 120},
+      {text: 'Desechos', weight: 50, color: '#3C7534', rotate: 35},
+      {text: 'Vida', weight: 40, color: '#008000', rotate: 12},
+      {text: 'Smog', weight: 30, color: '#3C7534', rotate: 35},
+      {text: 'Flora', weight: 40, color: '#008000', rotate: 120},
+      {text: 'Fauna', weight: 10, link: 'https://google.com', tooltip: 'display a tooltip'},
+      // ...
+    ];
 
     constructor(
     private fb: FormBuilder,

@@ -340,7 +340,17 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://mdsglobal.com/wp-content/uploads/2020/03/Network-1400x770.jpg" class="d-block w-100" alt="...">
+        <angular-tag-cloud
+    style="font-family: Impact; background-image: url('https://mdsglobal.com/wp-content/uploads/2020/03/Network-1400x770.jpg')"
+      [data]="data"
+      [width]="options.width"
+      [height]="options.height"
+      [overflow]="options.overflow"
+      [zoomOnHover]="options.zoomOnHover"
+      [realignOnResize]="options.realignOnResize"
+      [font]="options.font">
+    </angular-tag-cloud>
+        <!-- <img src="https://mdsglobal.com/wp-content/uploads/2020/03/Network-1400x770.jpg" class="d-block w-100" alt="..."> -->
         <div class="carousel-caption d-none d-md-block">
           <h5>First slide label</h5>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -444,6 +454,21 @@
     <pre *ngSwitchDefault></pre>
     <pre *ngSwitchCase="'filtrar'">El resultado de la busqueda debería aprecer AQUÍ</pre>
   </div>
+
+  <br>
+  <!-- <div>
+    <angular-tag-cloud
+    style="font-family: Impact; background-image: url('https://mdsglobal.com/wp-content/uploads/2020/03/Network-1400x770.jpg')"
+      [data]="data"
+      [width]="options.width"
+      [height]="options.height"
+      [overflow]="options.overflow"
+      [zoomOnHover]="options.zoomOnHover"
+      [realignOnResize]="options.realignOnResize"
+      [font]="options.font">
+    </angular-tag-cloud>
+  </div> -->
+
 
   <div id="mapa-map"></div>
 
