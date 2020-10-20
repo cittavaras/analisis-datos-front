@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 import * as Mapboxgl from 'mapbox-gl';
 import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 import { CloudData, CloudOptions } from 'angular-tag-cloud-module';
+import { JsonService} from './json.service';
 
 @Component({
   selector: 'app-root',
@@ -96,7 +97,8 @@ data3: CloudData[] = [
 
     constructor(
     private fb: FormBuilder,
-    private apiService: ApiService) {
+    private apiService: ApiService,
+    private json: JsonService) {
 
         this.form = fb.group({
                     parametro4: ['', [Validators.required]],
@@ -108,6 +110,7 @@ data3: CloudData[] = [
 
     mapa: Mapboxgl.Map;
     ngOnInit() {
+        this.json.getJson('/json/?data=2').subscribe((res:any)=>{console.log(res)});
         this.title = "Data analisis"
         Mapboxgl.accessToken = environment.mapboxKey;
         this.mapa = new Mapboxgl.Map({
