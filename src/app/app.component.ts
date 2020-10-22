@@ -109,8 +109,59 @@ data3: CloudData[] = [
     }
 
     mapa: Mapboxgl.Map;
+    palabra:JsonService[]=[]
+    key:JsonService[]=[]
+    value:JsonService[]=[]
     ngOnInit() {
-        this.json.getJson('/json/?data=2').subscribe((res:any)=>{console.log(res)});
+      this.json.getJson('/json/?data=2').subscribe((res:any)=>
+      {
+        this.palabra[0]= res.palabra1;
+        this.palabra[1]= res.palabra2;
+        this.palabra[2]= res.palabra3;
+        this.palabra[3]= res.palabra4;
+        this.palabra[4]= res.palabra5;
+        this.palabra[5]= res.palabra6;
+         console.log(this.palabra);
+        // var o = JSON.parse(res);
+        // console.log(o);
+        // var p1 = this.palabra;
+        // console.log(p1);
+        return this.palabra;
+      });
+      this.json.getJson('/json/?data=1').subscribe((res:any)=>
+      {
+        this.key[0]= res.key1;
+        this.key[1]= res.key2;
+        this.key[2]= res.key3;
+         console.log(this.key);
+        // var o = JSON.parse(res);
+        // console.log(o);
+        // var p1 = this.palabra;
+        // console.log(p1);
+        return this.key;
+      });
+      this.json.getJson('/json/?data=3').subscribe((res:any)=>
+      {
+        this.value[0]= res.value1;
+        this.value[1]= res.value2;
+        this.value[2]= res.value3;
+        this.value[3]= res.value4;
+        this.value[4]= res.value5;
+        this.value[5]= res.value6;
+        this.value[6]= res.value7;
+        this.value[7]= res.value8;
+        this.value[8]= res.value9;
+        this.value[9]= res.value10;
+        this.value[10]= res.value11;
+        this.value[11]= res.value12;
+         console.log(this.value);
+        // var o = JSON.parse(res);
+        // console.log(o);
+        // var p1 = this.palabra;
+        // console.log(p1);
+        return this.value;
+      });
+        this.json.getJson('/json/?data=1').subscribe((res:any)=>{console.log(res)});
         this.title = "Data analisis"
         Mapboxgl.accessToken = environment.mapboxKey;
         this.mapa = new Mapboxgl.Map({
